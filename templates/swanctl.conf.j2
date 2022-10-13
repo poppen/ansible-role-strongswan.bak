@@ -1,0 +1,1 @@
+{{ strongswan_swanctl_settings | to_nice_json | replace(':', ' =') | replace('"', '') | replace('= {', '{') | regex_replace('^{', '') | regex_replace('}$', '') |  regex_replace(',\n', '\n') | regex_replace(',', '') }}

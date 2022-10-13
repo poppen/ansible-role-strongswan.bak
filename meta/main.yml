@@ -1,0 +1,26 @@
+---
+galaxy_info:
+  role_name: strongswan
+  author: poppen
+  description: Role to install and configure a strongSwan IPSec VPN server
+
+  license: BSD-3-Clause
+
+  min_ansible_version: '2.9'
+
+  platforms:
+    - name: Debian
+      versions:
+        - buster
+        - bullseye
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+        - jammy
+
+  galaxy_tags:
+    - vpn
+    - ipsec
+    - strongswan
+    - swanctl

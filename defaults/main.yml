@@ -1,0 +1,30 @@
+---
+strongswan_conf_file: /etc/strongswan.d/01-strongswan.conf
+strongswan_swanctl_config_file: /etc/swanctl/conf.d/swanctl.conf"
+strongswan_swanctl_svc: strongswan.service
+strongswan_settings:
+  charon:
+    start-scripts:
+      load-all: /usr/sbin/swanctl --load-all --noprompt
+strongswan_swanctl_settings:
+  connections:
+    version: 2
+    mobike: "no"
+    proposals: aes256-sha256-modp2048
+    gw-gw:
+      local:
+        auth: psk
+        id: a.example.com
+      remote:
+        auth: psk
+        id: b.example.com
+      children:
+        net-net:
+          local_ts: 172.16.2.0/24
+          remote_ts: 10.13.11.0/24
+          esp_proposals: aes256-sha256
+  secrets:
+    ike-1:
+      id-1a: a.example.com
+      id-1b: b.example.com
+      secret: testtesttest

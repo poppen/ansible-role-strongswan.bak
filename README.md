@@ -8,8 +8,8 @@ most of the ideas are taken from https://github.com/serverbee/ansible-role-stron
 
 Tested on:
 
-- Ubuntu 16.04, 18.04 and 20.04
-- Debian 10 and 11
+- Ubuntu 20.04 and 22.04
+- Debian 11
 
 ## Requirements
 

@@ -1,5 +1,7 @@
 # Ansible Role: strongSwan
 
+[![CI](https://github.com/poppen/ansible-role-strongswan/actions/workflows/ci.yml/badge.svg)](https://github.com/poppen/ansible-role-strongswan/actions/workflows/ci.yml)
+
 An ansible role that installs and enables strongswan on Linux.
 
 This role uses a swanctl.conf instead of ipsec.conf, and uses distributions' packages only. (it means this role doesn't build and install strongswan from the source.)

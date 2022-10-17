@@ -32,3 +32,14 @@ strongswan_swanctl_settings:
       id-1a: a.example.com
       id-1b: b.example.com
       secret: testtesttest
+strongswan_log_rotation:
+  enable: true
+  conf_path: /etc/logrotate.d/charon
+  log_path: *strongswan_log_path
+  settings: |
+    missingok
+    copytruncate
+    compress
+    notifempty
+    daily
+    rotate 5

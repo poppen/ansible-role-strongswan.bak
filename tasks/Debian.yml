@@ -34,3 +34,14 @@
     state: started
     enabled: true
     daemon_reload: true
+
+- name: Configure swanstrong log rotation
+  ansible.builtin.blockinfile:
+    path: "{{ strongswan_log_rotation.conf_path }}"
+    create: true
+    mode: 0644
+    block: |
+      {{ strongswan_log_rotation.log_path }} {
+      {{ strongswan_log_rotation.settings | indent(width=8, first=True) }}
+      }
+  when: strongswan_log_rotation is defined and strongswan_log_rotation.enable

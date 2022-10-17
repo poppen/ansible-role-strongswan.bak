@@ -1,5 +1,5 @@
 ---
-strongswan_conf_file: /etc/strongswan.d/01-strongswan.conf
+strongswan_conf_file: /etc/strongswan.d/charon/01-strongswan.conf
 strongswan_swanctl_config_file: /etc/swanctl/conf.d/swanctl.conf
 strongswan_swanctl_svc: strongswan.service
 strongswan_settings:

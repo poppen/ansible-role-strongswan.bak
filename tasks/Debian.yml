@@ -42,6 +42,6 @@
     mode: 0644
     block: |
       {{ strongswan_log_rotation.log_path }} {
-      {{ strongswan_log_rotation.settings | indent(width=4, first=True) }}
+      {{ strongswan_log_rotation.settings | indent(width=4, first=True) | trim }}
       }
   when: strongswan_log_rotation is defined and strongswan_log_rotation.enable

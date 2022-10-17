@@ -32,10 +32,28 @@ None.
   ```yaml
   strongswan_settings:
     charon:
-      start-scripts:
-        load-all: /usr/sbin/swanctl --load-all --noprompt
+      filelog:
+        charon:
+          path: &strongswan_log_path "/var/log/charon.log"
+        stderr:
+          ike: 2
+          knl: 3
   ```
 
+- `strongswan_log_rotation`: Set settings in Dict format for rotating the strongswan log. It includes the below keys:
+    - `enable`: enabling the rotation. (Default `true`)
+    - `conf_path`: the installing file path of the logrotate configuration file. (Default: `/etc/logrotate.d/charon`)
+    - `log_path`: the file path of the log file. (Default: `*stronswan_log_path`. It indicates `/var/log/charon.log` in default setting)
+    - `settings`: the settings of log rotation. The default content is the following:
+
+      ```yaml
+      missingok
+      copytruncate
+      compress
+      notifempty
+      daily
+      rotate 5
+      ```
 
 ## Dependencies
 

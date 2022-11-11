@@ -1,6 +1,6 @@
 ansible==6.5.0
 ansible-compat==2.2.4
-ansible-core==2.13.5
+ansible-core==2.14.0
 ansible-lint==6.8.6
 arrow==1.2.3
 attrs==22.1.0
@@ -30,7 +30,7 @@ molecule-docker==2.1.0
 mypy-extensions==0.4.3
 packaging==21.3
 pathspec==0.10.1
-platformdirs==2.5.2
+platformdirs==2.5.3
 pluggy==1.0.0
 pycparser==2.21
 Pygments==2.13.0
